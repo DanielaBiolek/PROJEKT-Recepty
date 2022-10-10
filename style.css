@@ -33,3 +33,146 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+
+body {
+	color: white;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2 {
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+}
+
+
+h1 {font-size: 28px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+
+.recept {
+	padding: 10px;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 1px;
+}
+
+.ostatni {
+	min-height: 90px;
+}
+
+.salat {
+	background-image: url(images/salat.jpg);
+	min-height: 200px;
+}
+
+.chlebicek {
+	background-image: url(images/chlebicek.jpg);
+
+}
+
+.tacos {
+	background-image: url(images/tacos.jpg);
+
+}
+
+.pita {
+	background-image: url(images/cizrna.jpg);
+
+}
+
+.burger {
+	background-image: url(images/burger.jpg);
+	margin: 0;
+}
+
+.text {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 480px) {
+	
+	h1 {font-size: 36px;
+	}
+	
+	h2 {
+		font-size: 22px;
+	}
+	
+	.recept {
+		padding: 20px;
+	}
+	
+	.mensi {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.ostatni {
+		flex: 1 1 calc((100% - 1px) / 2);
+		min-height: 150px;
+	}
+	 
+	.salat {
+		margin: 0;
+		min-height: 250px;
+	}
+
+	.chlebicek,
+	.pita {
+		margin: 1px 1px 0 0;
+	}
+
+	.tacos,
+	.burger {
+		margin: 1px 0 0 0;
+	}
+
+}
+
+@media screen and (min-width: 860px) {
+
+	.vsechno {
+		display: flex;
+	}
+
+	h1 {font-size: 48px;
+	}
+	
+	h2 {
+		font-size: 28px;
+	}
+
+	.salat {
+		min-height: 400px;
+	}
+
+	.ostatni {
+		min-height: 200px;
+		flex: 1 1 calc((100% - 2px) / 2);
+	}
+
+	.tacos,
+	.chlebicek {
+		margin: 0 0 1px 1px;
+	}
+
+	.pita,
+	.burger {
+		margin: 0 0 0 1px;
+	}
